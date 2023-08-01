@@ -1,0 +1,74 @@
+<div class="user-info-div" style="background: white;height: auto;margin: 30px;border-radius: 2px;text-align: center;">
+    <div style="padding: 30px 30px 0px 30px">
+        <span style="font-size: 17px;color:#888;">User Information</span>
+    </div>
+    <table class="user-info-tbl" style="margin: 0px 0px 30px 30px;">
+        <tr>
+            <td>
+                <mat-form-field style="width:180px">
+                    <mat-label>Email Id</mat-label>
+                    <input matInput placeholder="" value="">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field style="width:200px">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="" value="">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field style="width:180px">
+                    <mat-label>Client</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let status of clients" [value]="status.value">
+                        {{status.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field style="width:230px">
+                    <mat-label>Permissions</mat-label>
+                    <mat-select multiple="multiple">
+                      <mat-option *ngFor="let status of permissions" [value]="status.value">
+                        {{status.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button mat-stroked-button>
+                    Add User
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+</div>  

@@ -1,0 +1,12 @@
+#auth {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10vh;
+  width: 50vh;
+  height: 85vh;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}

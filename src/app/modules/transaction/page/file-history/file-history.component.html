@@ -1,0 +1,39 @@
+<div id="file-history" style="width: 92%;margin: 30px 30px 30px 30px;">
+    <div style="position: relative;padding: 20px 30px 30px 30px;background: white;border-radius: 2px;">
+        <div style="position: absolute; right: 0px; top: 0px;width: auto;margin-right: 5px;">
+            <app-file-history-search></app-file-history-search>
+        </div>        
+        <div style="margin-bottom: 40px;">
+            <span style="font-size: 17px;color:#888;">Recently Uploaded Files</span>
+        </div>
+        <table id="file-history-tbl" mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <div *ngIf="element.status=='P'">
+                        <a href="javascript:void(-1)" (click)="openFileProcessorDialog()"><span class="material-icons" style="color: dodgerblue;">upload</span></a>   
+                    </div>                     
+                    <div *ngIf="element.status=='S'">
+                        <span class="material-icons" style="color: lightgray;">thumb_up</span>   
+                    </div> 
+                    <div *ngIf="element.status=='F'">
+                        <a href="javascript:void(-1)"><span class="material-icons" style="color: #CF2929;">thumb_down</span></a>   
+                    </div>                     
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

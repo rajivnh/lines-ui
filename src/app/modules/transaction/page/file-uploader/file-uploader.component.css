@@ -1,0 +1,13 @@
+.file-upload-div {
+    border-radius: 5px;
+}
+.file-upload-parent-div:hover {
+    background-color:#f9f9f9 !important;   
+    cursor: pointer;
+}
+.file-upload-div:active {
+    border: 1px solid white !important;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-left: 1px;
+}

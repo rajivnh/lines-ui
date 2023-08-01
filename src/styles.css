@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap0);
+* {
+  transition1: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+body {
+  background: #8A9AAE;
+}
+body, input, label, div {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px !important;
+    margin: 0;
+    line-height: normal !important;
+}
+.mat-mdc-table .mdc-data-table__header-row {
+  height: 36px;
+}
+.mdc-data-table__cell, .mdc-data-table__header-cell {
+  padding: 0px !important;
+}
+.mat-mdc-option .mdc-list-item__primary-text, .mat-mdc-select-value-text {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+}
+.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+}
+th, td {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+}
+th {
+  text-align: left !important;
+  font-weight: bold !important;
+}
+.mat-mdc-table td {
+  padding: 2px !important;
+  margin: 0px !important;
+}
+.mat-mdc-table .mdc-data-table__row {
+  height: 32px !important;
+}
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label, .mdc-button {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.mat-mdc-form-field-focus-overlay {
+  background-color: white;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white
+}
+.mdc-text-field {
+  padding: 0px !important;
+}
+.mat-mdc-dialog-surface {
+  border-radius: 2px !important;
+}

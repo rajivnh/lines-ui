@@ -1,0 +1,9 @@
+<div class="file-upload-parent-div" style="background: white;width: 80%;height: 260px;margin: 30px;border-radius: 2px;text-align: center;position: relative;">
+    <div class="file-upload-div" (click)="selectImage.click()" style="position: absolute;top: 50%;transform: translate(-50%, -50%);left: 50%;padding: 10px;width: 80%;">
+        <span class="material-icons" style="color: #888;font-size: 62px;">cloud_upload</span> 
+        <br>
+        <span style="color: #888;font-size: 17px;">Click here to upload a file</span>
+        <br><br>
+        <input type="file" (change)="updateImage($event)" style="display: none" #selectImage/>
+    </div>
+</div>    

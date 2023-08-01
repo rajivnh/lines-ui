@@ -1,0 +1,33 @@
+<table id="user-search-tbl">
+    <tr>
+        <td>
+            <mat-form-field style="width:210px">
+                <mat-label>Name / Email Id / Client</mat-label>
+                <input matInput placeholder="" value="">
+            </mat-form-field>
+        </td>
+        <td>
+            <mat-form-field style="width:130px">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </td>
+        <td>
+            <mat-form-field style="width:120px">
+                <mat-label>Status</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let status of userStatus" [value]="status.value">
+                    {{status.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </td>
+        <td>
+            <button mat-stroked-button>
+                Search
+            </button>
+        </td>
+    </tr>
+</table>
