@@ -17,6 +17,7 @@ interface Permission {
 })
 export class UserInfoComponent {
   clients: Client[] = [
+    {value: 'IT_SUPPORT', viewValue: 'IT Support'},
     {value: 'CIBC', viewValue: 'CIBC'},
     {value: 'CITI', viewValue: 'Citi Bank'},
     {value: 'BMO', viewValue: 'Bank of Montreal'}
@@ -24,8 +25,8 @@ export class UserInfoComponent {
 
   permissions: Permission[] = [
     {value: 'UPLOAD', viewValue: 'Upload'},
-    {value: 'READ', viewValue: 'Read'},
     {value: 'DELETE', viewValue: 'Delete'},
-    {value: 'TRANSACTION', viewValue: 'Transaction'}
+    {value: 'ADD_COMMENT', viewValue: 'Add Comment'},
+    {value: 'READ_COMMENT', viewValue: 'Read Comment'}
   ];  
 }

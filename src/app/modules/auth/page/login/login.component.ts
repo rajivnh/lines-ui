@@ -15,7 +15,7 @@ import { GlobalConstants } from 'src/app/core/constants/global-constants';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   authResponse!: AuthResponse;
-
+  
   constructor(
     private router: Router,
     private loginFormBuilder: FormBuilder,
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     GlobalConstants.USER_CONTEXT.accessToken = '';
-    
+
     this.loginForm = this.loginFormBuilder.group({
       emailId: ['rajivnh@msn.com', [Validators.required]],
       password: ['secret', [Validators.required]]
@@ -39,6 +39,16 @@ export class LoginComponent implements OnInit {
     let emailId = this.loginForm.get('emailId')?.value;
     let password = this.loginForm.get('password')?.value;
 
+    setTimeout(() => {
+      if(emailId === "rajivnh@msn.com") {
+        this.router.navigate(['/My/Dashboard']);
+      } else {
+        this.router.navigate(['/Admin/Dashboard']);
+      }
+      
+      this.spinnerService.isLoading = false;
+    }, 2000);
+    /*
     this.authService.auth(emailId, password).subscribe(
       (authResponse) => {
         this.authResponse = authResponse;
@@ -48,7 +58,7 @@ export class LoginComponent implements OnInit {
           accessToken: this.authResponse.access_token, 
           isLoggerIn: true
         };
-
+          
         setTimeout(() => {
           if(emailId === "rajivnh@msn.com") {
             this.router.navigate(['/My/Dashboard']);
@@ -59,6 +69,6 @@ export class LoginComponent implements OnInit {
           this.spinnerService.isLoading = false;
         }, 2000);
       }
-    );
+    );*/
   }
 }

@@ -56,3 +56,11 @@ th {
 .mat-mdc-dialog-surface {
   border-radius: 2px !important;
 }
+.cdk-global-overlay-wrapper {
+  overflow: auto;
+}
+.mdc-tooltip--shown .mdc-tooltip__surface-animation {
+  font-family: 'PT Sans Narrow';
+  border-radius: 3px !important;
+}
+
